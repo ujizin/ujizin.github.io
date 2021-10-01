@@ -185,6 +185,10 @@ body {
         width: 184px;
     }
 
+    .background {
+        min-height: 568px;
+    }
+
     .background::before {
         top: 0;
         left: unset;
