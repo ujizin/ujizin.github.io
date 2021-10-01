@@ -82,8 +82,27 @@ body {
     transform: translateX(-50%);
 }
 
+.header-subtitle {
+    position: relative;
+    width: 250px;
+    margin: 20px auto;
+    animation: flipWhiteToRedColor 20s infinite;
+}
+
+.header-subtitle:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    animation: sliderAnimation 20s infinite;
+}
+
 .red {
     color: #D92F2F;
+    animation: flipWhiteToRed 20s infinite;
 }
 
 .social-network-list {
@@ -196,5 +215,129 @@ body {
         width: 500px;
         height: 500px;
         transform: translate(50%, -50%);
+    }
+}
+
+@keyframes sliderAnimation {
+    0% {
+        width: 0;
+        background-color: #FFFFFF;
+        left: 0;
+    }
+
+    2% {
+        width: 50%;
+        left: 0%;
+    }
+    
+    4% {
+        background-color: #FFFFFF;
+        width: 65%;
+        left: 35%;
+    }
+
+    5% {
+        background-color: #FFFFFF;
+        width: 56%;
+        left: 44%;
+    }
+
+    5.25% {
+        background-color: #FFFFFF;
+        width: 55%;
+        left: 45%;
+    }
+
+    6% {
+        background-color: #FFFFFF;
+        width: 0;
+        left: 105%;
+    }
+
+    50% {
+        width: 0;
+        background-color: #D92F2F;
+        left: 0;
+    }
+
+    52% {
+        width: 50%;
+        left: 0%;
+    }
+    
+    54% {
+        background-color: #D92F2F;
+        width: 65%;
+        left: 35%;
+    }
+
+    55% {
+        background-color: #D92F2F;
+        width: 56%;
+        left: 44%;
+    }
+
+    55.25% {
+        background-color: #D92F2F;
+        width: 56%;
+        left: 44%;
+    }
+
+    56% {
+        background-color: #D92F2F;
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes flipWhiteToRed {
+    0% {
+        color: #D92F2F;
+    }
+
+    3.4% {
+        color: #D92F2F;
+    }
+
+    3.5% {
+        color: #FFFFFF;
+    }
+
+    50% {
+        color: #FFFFFF;
+    }
+    
+    53.4% {
+        color: #FFFFFF;
+    }
+    
+    54% {
+        color: #D92F2F;
+    }
+}
+
+@keyframes flipWhiteToRedColor {
+    0% {
+        color: #FFFFFF;
+    }
+
+    1.9% {
+        color: #FFFFFF;
+    }
+
+    2% {
+        color: #D92F2F;
+    }
+
+    50% {
+        color: #D92F2F;
+    }
+    
+    51.9% {
+        color: #D92F2F;
+    }
+
+    52% {
+        color: #FFFFFF;
     }
 }
