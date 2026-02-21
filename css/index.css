@@ -106,13 +106,13 @@ body {
 }
 
 .social-network-list {
-    width: 368px;
-    margin: 0 auto;
     list-style: none;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 0 8px;
+    margin: 0 auto;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 .social-network-item {
@@ -147,10 +147,6 @@ body {
 
 .linkedin {
     background-image: url(../assets//icons/linkedin.svg);
-}
-
-.instagram {
-    background-image: url(../assets//icons/instagram.svg);
 }
 
 .youtube {
@@ -199,9 +195,9 @@ body {
     }
 
     .social-network-list {
-        grid-template-columns: repeat(3, 1fr);
+        width: min(100%, 160px);
+        flex-wrap: wrap;
         gap: 16px 8px;
-        width: 184px;
     }
 
     .background {
